@@ -1,0 +1,48 @@
+﻿@model AerolineaExpress.Models.planificados
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Agregar</h1>
+
+<h4>planificados</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Destino" class="control-label"></label>
+                <input asp-for="Destino" class="form-control" />
+                <span asp-validation-for="Destino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hora_de_salida" class="control-label"></label>
+                <input asp-for="Hora_de_salida" class="form-control" />
+                <span asp-validation-for="Hora_de_salida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hora_de_llegada" class="control-label"></label>
+                <input asp-for="Hora_de_llegada" class="form-control" />
+                <span asp-validation-for="Hora_de_llegada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cantida_de_pasajeros" class="control-label"></label>
+                <input asp-for="Cantida_de_pasajeros" class="form-control" />
+                <span asp-validation-for="Cantida_de_pasajeros" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Atras</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
